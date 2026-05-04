@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #0f1117;
+  --bg-secondary: #181c27;
+  --bg-card: #1e2235;
+  --bg-card-hover: #252a3d;
+  --border: #2a3050;
+  --accent-blue: #4f8ef7;
+  --accent-green: #34d399;
+  --accent-red: #f87171;
+  --accent-yellow: #fbbf24;
+  --accent-purple: #a78bfa;
+  --text-primary: #f0f4ff;
+  --text-secondary: #8b9ccc;
+  --text-muted: #4a5578;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* MUI override: force dark styles in inputs */
+.MuiInputBase-root {
+  color: var(--text-primary) !important;
+}
+.MuiOutlinedInput-notchedOutline {
+  border-color: var(--border) !important;
+}
+.MuiInputLabel-root {
+  color: var(--text-secondary) !important;
+}
+.MuiSelect-icon {
+  color: var(--text-secondary) !important;
+}
